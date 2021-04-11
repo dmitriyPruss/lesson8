@@ -68,7 +68,7 @@ body{
     margin: 0;
     padding: 0;
 } */
-div[class]{
+/* div[class]{
     color: blue;
 }
 
@@ -77,10 +77,10 @@ div[class="parent"]{
 }
 div[class|="parent"]{
     border-bottom: 2px dashed green;
-}
+} */
 
 /* Pseudoclasses */
-:root{
+/* :root{
     --card-width: 300px;
     color: rebeccapurple;
     font-size: 16px;
@@ -136,10 +136,10 @@ a:hover{
 }
 .activeElement:active{
     background-color: crimson;
-}
+} */
 
 /* pseudoclasses of daughter elements */
-li:first-child{
+/* li:first-child{
     color: #335511
 }
 li:last-child{
@@ -158,4 +158,74 @@ li:last-child{
 }
 .parent > *:nth-child(odd){
     background-color: rgb(138, 125, 150);
+}
+
+li:nth-child(4n+1){
+    font-weight: bold;
+}
+.parent > span:nth-of-type(odd){
+    font-style: italic; 
+} */
+
+/* part 3 */
+
+table{
+    border: 0px solid black;
+    border-collapse: collapse;
+} 
+
+thead{
+    color: rgb(255, 255, 255);
+}
+
+tbody>tr:nth-child(odd){
+    background-color: rgb(207, 187, 187);
+}
+tbody>tr:nth-child(odd)>td:nth-child(2n){
+    background-color: rgb(236, 223, 223);
+}
+tbody>tr:nth-child(even){
+    background-color: rgb(221, 192, 192);
+}
+tbody>tr:nth-child(even)>td:nth-child(2n){
+    background-color: rgb(133, 102, 102);
+}
+
+th:first-child{
+    background-color: rgb(191, 192, 235); 
+}
+th:nth-child(2n){
+    background-color: rgb(151, 153, 241); 
+}
+th:nth-child(3n){
+    background-color: rgb(103, 105, 236); 
+}
+th:nth-child(4n){
+    background-color: rgb(53, 55, 204); 
+}
+
+td{
+    padding: 8px 30px;
+}
+
+td>a{
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: lavender;
+}
+
+a:link{
+    color: rgb(44, 39, 39);
+}
+a:hover{
+    background:rgb(180, 230, 230);
+    color: red;
+}
+a:visited{
+    color: rgb(44, 39, 39);
+}
+a:active{
+    color: yellow;
 }
