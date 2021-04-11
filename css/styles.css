@@ -1,0 +1,161 @@
+/* part 1 */
+/*
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 600px;
+    height: 600px;
+    background-color: deepskyblue;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > div{
+    width: 190px;
+    height: 190px;
+    position: absolute;
+}
+
+.child{
+    background-color: brown;
+    top:0px;
+    left: 0px;
+    z-index: 1;
+}
+.child2{
+    background-color: rgb(170, 194, 148);
+    top:95px;
+    left:95px;
+}
+
+.child3{
+    background-color: dimgray;
+    z-index: 1;
+}
+
+.child4{
+    background-color: rgb(80, 20, 20);
+    bottom:95px;
+    right:95px;
+}
+
+.child5{
+    background-color: rgb(24, 84, 153);
+    bottom:0px;
+    right:0px;
+} */
+
+
+
+/* part 2 */
+/* atrribute`s selectors */
+/* *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+div[class]{
+    color: blue;
+}
+
+div[class="parent"]{
+    background-color: gainsboro;
+}
+div[class|="parent"]{
+    border-bottom: 2px dashed green;
+}
+
+/* Pseudoclasses */
+:root{
+    --card-width: 300px;
+    color: rebeccapurple;
+    font-size: 16px;
+    font-family: sans-serif;   
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+ul.navList{
+    padding:10px;
+    list-style:none;
+    font-size: 0;
+}
+li.navListItem{
+    display:inline-block; 
+}
+.navListItem>a{
+    display:inline-block; 
+    min-width: 100px;
+    width: 100%;
+    max-width: 200px;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: rgb(241, 227, 200);
+    background-color: salmon;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid wheat;
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+a:link{
+
+}
+a:visited{
+    background-color: rgb(156, 156, 50);
+}
+a:hover{
+    cursor: pointer;
+    background-color: violet;
+}
+.activeElement{
+    width: 200px;
+    height:100px;
+    background-color: chocolate;
+}
+.activeElement:active{
+    background-color: crimson;
+}
+
+/* pseudoclasses of daughter elements */
+li:first-child{
+    color: #335511
+}
+li:last-child{
+    color: rgb(95, 87, 87)
+}
+.parent > span:last-of-type{
+    color:maroon
+}
+
+.parent > div:first-of-type{
+    border:1px dotted maroon
+}
+
+.parent > *:nth-child(even){
+    background-color: blueviolet;
+}
+.parent > *:nth-child(odd){
+    background-color: rgb(138, 125, 150);
+}
